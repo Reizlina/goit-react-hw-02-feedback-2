@@ -1,0 +1,15 @@
+.list {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  width: 200px;
+  padding: 0;
+}
+
+.btn {
+  background-color: blanchedalmond;
+  outline: none;
+  border: 1px solid lightcoral;
+  border-radius: 5px;
+  padding: 5px 10px;
+}
