@@ -15,15 +15,14 @@ class Feedback extends Component {
   };
 
   countTotalFeedback() {
-    const { good, neutral, bad } = this.state;
-    return good + neutral + bad;
+    const values = Object.values(this.state);
+    return values.reduce((previousValue, number) => {
+      return previousValue + number;
+    }, 0);
   }
   countPositiveFeedbackPercentage() {
     const { good } = this.state;
     const total = this.countTotalFeedback();
-    if (total === 0) {
-      return 0;
-    }
     return Math.round(good / (total / 100));
   }
 
